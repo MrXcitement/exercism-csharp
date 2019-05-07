@@ -4,7 +4,13 @@ name ?= exercism-csharp
 all: run
 
 run:
-	docker run -dit -v $(CURDIR):/workspace --name $(name) $(image)
+	mkdir -p $(CURDIR)/.config/exercism
+	docker run \
+		-dit \
+		-v $(CURDIR)/.config/exercism:/root/.config/exercism \
+		-v $(CURDIR):/workspace \
+		--name $(name) \
+		$(image)
 
 exec:
 	docker exec -it $(name) bash

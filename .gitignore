@@ -89,3 +89,4 @@ artifacts/
 *.e2e
 
 # End of https://www.gitignore.io/api/csharp
+.config/
