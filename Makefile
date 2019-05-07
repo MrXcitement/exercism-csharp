@@ -1,25 +1,27 @@
-image ?= mrbarker/exercism-csharp:0.1.0
-name ?= exercism-csharp
+username ?= mrbarker
+imagename ?= exercism-csharp
+tag ?= 0.1.0
 
-all: run
+.PHONY: docker-run docker-exec docker-stop docker-kill docker-rm
+all: 
 
-run:
+docker-run:
 	mkdir -p $(CURDIR)/.config/exercism
 	docker run \
 		-dit \
 		-v $(CURDIR)/.config/exercism:/root/.config/exercism \
 		-v $(CURDIR):/workspace \
-		--name $(name) \
-		$(image)
+		--name $(imagename) \
+		$(username)/$(imagename):$(tag)
 
-exec:
-	docker exec -it $(name) bash
+docker-exec:
+	docker exec -it $(imagename) bash
 
-stop:
-	docker stop $(name)
+docker-stop:
+	docker stop $(imagename)
 
-kill:
-	docker kill $(name)
+docker-kill:
+	docker kill $(imagename)
 
-rm:
-	docker rm $(name)
+docker-rm:
+	docker rm $(imagename)
