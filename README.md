@@ -1,5 +1,5 @@
 # Exercism 'C' Track
-An Exercism 'c#' track project. 
+My Exercism 'c#' track solutions. 
 
 ## Overview
 This project uses the docker exercism c# image to create a container that can be
