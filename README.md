@@ -1,40 +1,57 @@
 # Exercism 'C' Track
-My Exercism 'c#' track solutions. 
+My Exercism 'c#' track solutions.
 
 ## Overview
 This project uses the docker exercism c# image to create a container that can be
 used to work through the 'c#' track exercises.
 
 ## Usage
-
-To run the exercism 'c#' docker container
-
-```
-$ make docker-run
-```
-
-To 'exec' a login shell in the container
+To create and start the exercism 'bash' container
 
 ```
-$ make docker-exec
+$ make up
 ```
 
-To stop the container
+To execute a login shell on the container
 
 ```
-$ make docker-stop
+$ make shell
+```
+
+To stop and remove a running container
+
+```
+$ make down
+```
+
+To list the status of the container
+
+```
+$ make ps
+```
+
+To start a stopped container
+
+```
+$ make start
+```
+
+To stop a running container
+
+```
+$ make stop
 ```
 
 To kill the container, if it can't be stopped
 
 ```
-$ make docker-kill
+$ make kill
 ```
 
-To rm the container
+To remove a stopped container
 
 ```
-$ make docker-rm
+$ make rm
 ```
 
 ## Contributing
@@ -45,7 +62,7 @@ conduct, and the process for submitting pull requests to us.
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available,
-see the [tags on this repository](tags). 
+see the [tags on this repository](tags).
 
 ## Authors
 
