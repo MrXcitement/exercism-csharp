@@ -9,12 +9,7 @@ public static class Pangram
 {
     public static bool IsPangram(string input)
     {
-        HashSet<char> letterFound = new HashSet<char>();
-        foreach (var letter in input ) {
-            if (char.IsLetter(letter)) {
-                letterFound.Add(char.ToLower(letter));
-            }
-        }
-        return letterFound.Count == 26;
+        var hashSet = new HashSet<char>(input.ToLower());
+        return hashSet.IsSupersetOf("abcdefghijklmnopqrstuvwxyz");
     }
 }
