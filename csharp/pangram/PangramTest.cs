@@ -58,7 +58,7 @@ public class PangramTest
         Assert.True(Pangram.IsPangram("\"Five quacking Zephyrs jolt my wax bed.\""));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact] //(Skip = "Remove to run test")]
     public void Upper_and_lower_case_versions_of_the_same_character_should_not_be_counted_separately()
     {
         Assert.False(Pangram.IsPangram("the quick brown fox jumps over with lazy FX"));
