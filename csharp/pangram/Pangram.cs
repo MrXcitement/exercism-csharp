@@ -11,7 +11,9 @@ public static class Pangram
     {
         HashSet<char> letterFound = new HashSet<char>();
         foreach (var letter in input ) {
-            letterFound.Add(letter);
+            if (char.IsLetter(letter)) {
+                letterFound.Add(letter);
+            }
         }
         return letterFound.Count == 26;
     }
